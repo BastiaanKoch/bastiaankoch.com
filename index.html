@@ -66,48 +66,43 @@
     </p>
 <div class="video-section">
 
-  <!-- Template 1: YouTube Embed -->
+<!-- VIDEO TEMPLATES -->
+<div class="video-section">
+
+  <!-- Vimeo Embed -->
   <div class="video-wrapper">
-   <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Bmq6MIeEQ-0?si=5toLS4D4ZHg1Wbzh&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe 
+      src="https://player.vimeo.com/video/311007827?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+      width="2048" 
+      height="1080" 
+      frameborder="0" 
+      allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
+      referrerpolicy="strict-origin-when-cross-origin" 
+      title="Is This Heaven - Teaser" 
+      allowfullscreen>
+    </iframe>
   </div>
 
-  <!-- Template 2: Local MP4 -->
+  <!-- Template 2: Placeholder Vimeo -->
   <div class="video-wrapper">
-    <video controls>
+    <iframe 
+      src="https://player.vimeo.com/video/76979871" 
+      width="2048" 
+      height="1080" 
+      frameborder="0" 
+      allow="autoplay; fullscreen; picture-in-picture" 
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <!-- Template 3: Local MP4 fallback -->
+  <div class="video-wrapper">
+    <video width="100%" height="100%" controls>
       <source src="reel1.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
   </div>
 
-</div>
-
-<style>
-.video-section {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-}
-
-.video-wrapper {
-  position: relative;
-  width: 100%;
-  padding-top: 56.25%; /* 16:9 */
-  overflow: hidden;
-  border-radius: 8px;
-  background: #000;
-}
-
-.video-wrapper iframe,
-.video-wrapper video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
 </style>
 
 </div>
