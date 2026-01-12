@@ -32,43 +32,72 @@
     a { color: #f2f2f2; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.3); transition: border-color 0.3s; }
     a:hover { border-color: #f2f2f2; }
 
-  <!-- VIDEO TEMPLATES -->
+<!-- VIDEO SECTION -->
 <div class="video-section">
 
-  <!-- Vimeo Embed -->
+  <!-- Vimeo Embed 1 -->
   <div class="video-wrapper">
     <iframe 
-      src="https://player.vimeo.com/video/311007827?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
-      width="2048" 
-      height="1080" 
-      frameborder="0" 
-      allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
-      referrerpolicy="strict-origin-when-cross-origin" 
+      src="https://player.vimeo.com/video/311007827" 
       title="Is This Heaven - Teaser" 
-      allowfullscreen>
-    </iframe>
-  </div>
-
-  <!-- Template 2: Placeholder Vimeo -->
-  <div class="video-wrapper">
-    <iframe 
-      src="https://player.vimeo.com/video/76979871" 
-      width="2048" 
-      height="1080" 
       frameborder="0" 
       allow="autoplay; fullscreen; picture-in-picture" 
       allowfullscreen>
     </iframe>
   </div>
 
-  <!-- Template 3: Local MP4 fallback -->
+  <!-- Vimeo Embed 2 -->
   <div class="video-wrapper">
-    <video width="100%" height="100%" controls>
-      <source src="reel1.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+    <iframe 
+      src="https://player.vimeo.com/video/76979871" 
+      title="Placeholder Vimeo" 
+      frameborder="0" 
+      allow="autoplay; fullscreen; picture-in-picture" 
+      allowfullscreen>
+    </iframe>
   </div>
-  </style>
+
+</div>
+
+<style>
+.video-section {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem; /* space between videos */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 ratio */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Responsive tweaks for smaller screens */
+@media (max-width: 768px) {
+  .video-section {
+    gap: 2rem;
+  }
+  .video-wrapper {
+    padding-top: 56.25%; /* keep 16:9 ratio */
+  }
+}
+</style>
+
 </head>
 <body>
   <div class="container">
@@ -121,3 +150,4 @@
   </div>
 </body>
 </html>
+
