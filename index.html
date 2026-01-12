@@ -16,7 +16,6 @@
       padding: 40px 20px;
     }
 
-    /* Container */
     .container {
       max-width: 900px;
       margin: 0 auto;
@@ -29,16 +28,23 @@
 
     h1 { font-size: 3rem; font-weight: 400; letter-spacing: 0.05em; }
     h2 { font-weight: 300; font-size: 1.2rem; opacity: 0.85; margin-bottom: 2rem; }
-
     p { font-size: 1rem; line-height: 1.6; opacity: 0.9; }
-
     a { color: #f2f2f2; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.3); transition: border-color 0.3s; }
     a:hover { border-color: #f2f2f2; }
 
-    /* Video placeholders */
+    /* Video section */
+    .video-section {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
     .video-wrapper {
       position: relative;
-      padding-top: 56.25%; /* 16:9 aspect ratio */
+      padding-top: 56.25%; /* 16:9 */
       border-radius: 6px;
       overflow: hidden;
       box-shadow: 0 0 20px rgba(0,0,0,0.5);
@@ -52,88 +58,56 @@
       width: 100%;
       height: 100%;
       border: none;
+      background: #000;
     }
 
     footer { margin-top: 60px; font-size: 0.85rem; opacity: 0.6; }
+
+    @media (max-width: 768px) {
+      .video-wrapper iframe,
+      .video-wrapper video {
+        height: 250px;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Bastiaan Koch | Director</h1>
-
     <p>
       Bastiaan Koch is a writer‑director and artist with a bold cinematic voice. He began in the London theater world, and those roots remain central to how he finds the narrative truth in every character. After 11 years at Lucasfilm, he now makes films and series that fuse character depth with cinematic ambition.
     </p>
-<div class="video-section">
 
-<!-- VIDEO TEMPLATES -->
-<div class="video-section">
+    <div class="video-section">
+      <!-- Vimeo Embed -->
+      <div class="video-wrapper">
+        <iframe 
+          src="https://player.vimeo.com/video/311007827?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+          frameborder="0" 
+          allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
+          allowfullscreen
+          title="Is This Heaven - Teaser">
+        </iframe>
+      </div>
 
-  <!-- Vimeo Embed -->
-  <div class="video-wrapper">
-    <iframe 
-      src="https://player.vimeo.com/video/311007827?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
-      width="2048" 
-      height="1080" 
-      frameborder="0" 
-      allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
-      referrerpolicy="strict-origin-when-cross-origin" 
-      title="Is This Heaven - Teaser" 
-      allowfullscreen>
-    </iframe>
-  </div>
+      <!-- Placeholder Vimeo -->
+      <div class="video-wrapper">
+        <iframe 
+          src="https://player.vimeo.com/video/76979871" 
+          frameborder="0" 
+          allow="autoplay; fullscreen; picture-in-picture" 
+          allowfullscreen>
+        </iframe>
+      </div>
 
-  <!-- Template 2: Placeholder Vimeo -->
-  <div class="video-wrapper">
-    <iframe 
-      src="https://player.vimeo.com/video/76979871" 
-      width="2048" 
-      height="1080" 
-      frameborder="0" 
-      allow="autoplay; fullscreen; picture-in-picture" 
-      allowfullscreen>
-    </iframe>
-  </div>
-
-  <!-- Template 3: Local MP4 fallback -->
-  <div class="video-wrapper">
-    <video width="100%" height="100%" controls>
-      <source src="reel1.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </div>
-
-</style>
-
-</div>
-
-<!-- Optional styling -->
-<style>
-  .video-section {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
-  }
-
-  .video-wrapper iframe,
-  .video-wrapper video {
-    width: 100%;
-    height: 450px; /* adjust for aspect ratio */
-    border-radius: 8px;
-    background: #000;
-  }
-
-  /* Make video responsive */
-  @media (max-width: 768px) {
-    .video-wrapper iframe,
-    .video-wrapper video {
-      height: 250px;
-    }
-  }
-</style>
+      <!-- Local MP4 -->
+      <div class="video-wrapper">
+        <video controls>
+          <source src="reel1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
 
     <p>
       <a href="mailto:contact@bastiaankoch.com">contact@bastiaankoch.com</a>
