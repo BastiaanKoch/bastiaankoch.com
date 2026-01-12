@@ -32,43 +32,42 @@
     a { color: #f2f2f2; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.3); transition: border-color 0.3s; }
     a:hover { border-color: #f2f2f2; }
 
-    /* Video section */
-    .video-section {
-      display: flex;
-      flex-direction: column;
-      gap: 3rem;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 1rem;
-    }
+  <!-- VIDEO TEMPLATES -->
+<div class="video-section">
 
-    .video-wrapper {
-      position: relative;
-      padding-top: 56.25%; /* 16:9 aspect ratio */
-      border-radius: 6px;
-      overflow: hidden;
-      box-shadow: 0 0 20px rgba(0,0,0,0.5);
-      background: #000;
-    }
+  <!-- Vimeo Embed -->
+  <div class="video-wrapper">
+    <iframe 
+      src="https://player.vimeo.com/video/311007827?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+      width="2048" 
+      height="1080" 
+      frameborder="0" 
+      allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
+      referrerpolicy="strict-origin-when-cross-origin" 
+      title="Is This Heaven - Teaser" 
+      allowfullscreen>
+    </iframe>
+  </div>
 
-    .video-wrapper iframe,
-    .video-wrapper video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
+  <!-- Template 2: Placeholder Vimeo -->
+  <div class="video-wrapper">
+    <iframe 
+      src="https://player.vimeo.com/video/76979871" 
+      width="2048" 
+      height="1080" 
+      frameborder="0" 
+      allow="autoplay; fullscreen; picture-in-picture" 
+      allowfullscreen>
+    </iframe>
+  </div>
 
-    footer { margin-top: 80px; font-size: 0.85rem; opacity: 0.6; }
-
-    @media (max-width: 768px) {
-      .video-wrapper iframe,
-      .video-wrapper video {
-        height: 250px;
-      }
-    }
+  <!-- Template 3: Local MP4 fallback -->
+  <div class="video-wrapper">
+    <video width="100%" height="100%" controls>
+      <source src="reel1.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
   </style>
 </head>
 <body>
