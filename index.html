@@ -64,7 +64,6 @@
     <p>
       Bastiaan Koch is a writer‑director and artist with a bold cinematic voice. He began in the London theater world, and those roots remain central to how he finds the narrative truth in every character. After 11 years at Lucasfilm, he now makes films and series that fuse character depth with cinematic ambition.
     </p>
-<!-- VIDEO TEMPLATES -->
 <div class="video-section">
 
   <!-- Template 1: YouTube Embed -->
@@ -78,24 +77,44 @@
     </iframe>
   </div>
 
-  <!-- Template 2: YouTube Embed -->
+  <!-- Template 2: Local MP4 -->
   <div class="video-wrapper">
-    <iframe 
-      src="https://www.youtube.com/embed/ANOTHER_VIDEO_ID" 
-      title="YouTube video player" 
-      frameborder="0" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-      allowfullscreen>
-    </iframe>
-  </div>
-
-  <!-- Template 3: Local MP4 -->
-  <div class="video-wrapper">
-    <video width="100%" height="100%" controls>
+    <video controls>
       <source src="reel1.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
   </div>
+
+</div>
+
+<style>
+.video-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 */
+  overflow: hidden;
+  border-radius: 8px;
+  background: #000;
+}
+
+.video-wrapper iframe,
+.video-wrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+</style>
 
 </div>
 
