@@ -5,113 +5,32 @@
   <title>Bastiaan Koch | Director</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
-    /* Base Reset */
+    /* Reset & base */
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
       background: #0e0e0e;
       color: #f2f2f2;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       min-height: 100vh;
       text-align: center;
-      padding: 20px;
+      padding: 40px 20px;
     }
 
-    /* ASCII Background */
-    #ascii-bg {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      color: rgba(255, 255, 255, 0.05); /* subtle */
-      font-family: monospace;
-      font-size: 8px;
-      line-height: 7px;
-      z-index: 0;
-      pointer-events: none; /* clicks pass through */
-    }
-
+    /* Container */
     .container {
-      max-width: 720px;
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
       position: relative;
-      z-index: 1; /* above ASCII background */
+      z-index: 1;
     }
 
-    h1 { font-size: 3rem; font-weight: 400; margin-bottom: 0.3em; letter-spacing: 0.05em; }
+    h1 { font-size: 3rem; font-weight: 400; letter-spacing: 0.05em; }
     h2 { font-weight: 300; font-size: 1.2rem; opacity: 0.85; margin-bottom: 2rem; }
-    p { font-size: 1rem; line-height: 1.6; opacity: 0.9; margin-bottom: 2rem; }
 
-    .placeholder, .reel {
-      border: 1px solid rgba(255,255,255,0.2);
-      padding: 20px;
-      margin-bottom: 2rem;
-      font-size: 0.95rem;
-      opacity: 0.7;
-      transition: opacity 0.3s, transform 0.3s;
-    }
-
-    .placeholder:hover, .reel:hover { opacity: 1; transform: translateY(-2px); }
+    p { font-size: 1rem; line-height: 1.6; opacity: 0.9; }
 
     a { color: #f2f2f2; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.3); transition: border-color 0.3s; }
-    a:hover { border-color: #f2f2f2; }
 
-    footer { margin-top: 3rem; font-size: 0.85rem; opacity: 0.6; }
-
-  </style>
-</head>
-
-<body>
-  <pre id="ascii-bg"></pre>
-
-  <div class="container">
-    <h1>Bastiaan Koch</h1>
-    <h2>Director</h2>
-
-    <div class="placeholder">Narrative reel coming soon.</div>
-
-    <p>
-      I direct character-driven genre stories grounded in performance and world-building.
-      After two decades leading large-scale productions, I am focused on directing features
-      and premium series.
-    </p>
-
-    <p>
-      <a href="mailto:contact@bastiaankoch.com">contact@bastiaankoch.com</a>
-    </p>
-
-    <footer>&copy; 2026 Bastiaan Koch</footer>
-  </div>
-
-  <script>
-    // ASCII Dragon Ball battle frames
-    const frames = [
-      "   (>_<)   ___⚡   (>_<)\\n    Kamehameha!",
-      "   (>_<)   ___⚡   (>_<)\\n    Energy clash!",
-      "   (>_<)   ___⚡   (>_<)\\n    POW!",
-      "   (>_<)   ___⚡   (>_<)\\n    ZAP!",
-      "   (>_<)   ___⚡   (>_<)\\n    Ka-BLAST!",
-      "   (>_<)   ___⚡   (>_<)\\n    Flash!",
-      "   (>_<)   ___⚡   (>_<)\\n    Boom!",
-      "   (>_<)   ___⚡   (>_<)\\n    Whoosh!",
-      "   (>_<)   ___⚡   (>_<)\\n    Clash!",
-      "   (>_<)   ___⚡   (>_<)\\n    Kamehameha!"
-    ];
-
-    let current = 0;
-    const asciiBg = document.getElementById('ascii-bg');
-
-    function loopAscii() {
-      asciiBg.textContent = frames[current];
-      current = (current + 1) % frames.length;
-    }
-
-    setInterval(loopAscii, 500); // adjust speed
-  </script>
-
-</body>
-</html>
